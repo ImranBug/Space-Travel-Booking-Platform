@@ -1,7 +1,8 @@
-// src/pages/Dashboard.js
 import React, { useContext } from 'react';
 import { BookingContext } from '../context/BookingContext';
 import Countdown from '../components/Countdown';
+import AccommodationRecommendations from '../components/AccommodationRecommendations';
+import TravelTips from '../components/TravelTips';
 
 const Dashboard = () => {
   const { bookings } = useContext(BookingContext);
@@ -25,6 +26,8 @@ const Dashboard = () => {
           ))}
         </ul>
       )}
+      <AccommodationRecommendations />
+      <TravelTips />
     </div>
   );
 };

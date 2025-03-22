@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import App from './App';
 import BookingProvider from './context/BookingContext';
+import theme from './theme';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BookingProvider>
-    <App />
-  </BookingProvider>
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <BookingProvider>
+      <App />
+    </BookingProvider>
+  </ThemeProvider>
 );
